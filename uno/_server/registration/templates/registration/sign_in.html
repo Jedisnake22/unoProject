@@ -1,0 +1,27 @@
+{% extends "registration/base.html"%}
+
+{% block content %}
+<div id="cardBackInner">
+  <div id="cardText">
+    UNO
+  </div>
+</div>
+<form action="/registration/sign_in/" method="post">
+  {% csrf_token %}
+  <div>
+    <label>
+      Email
+      <input type="email" name="email">
+    </label>
+  </div>
+  <div>
+    <label>
+      Password
+      <input type="password" name="password">
+    </label>
+  </div>
+  <button>Sign In</button>
+
+<a href="/registration/sign_up/">Create New Account</a>
+</form>
+{% endblock %}
